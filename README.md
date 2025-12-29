@@ -47,3 +47,8 @@ pip install -r requirements.txt
 
 ### 3 Run
 python main.py
+
+### Output Image
+![Application Output](https://github.com/user-attachments/assets/3586a2a3-8a58-4395-92be-0df5c7c719a7)
+
+
