@@ -1,6 +1,6 @@
-# Agentic SEO Analyzer
+# Agentic-inspired SEO Analyzer
 
-An agentic AI-based SEO(Search Engine Optimization) analysis system that inspects webpage content, extracts semantic keyword signals, identifies SEO weaknesses, and suggests targeted improvements to enhance visibility and content quality.
+An agentic-inspired AI-based SEO(Search Engine Optimization) analysis system that inspects webpage content, extracts semantic keyword signals, identifies SEO weaknesses, and suggests targeted improvements to enhance visibility and content quality.
 
 ---
 
