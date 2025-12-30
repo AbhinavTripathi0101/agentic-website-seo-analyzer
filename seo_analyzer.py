@@ -1,10 +1,20 @@
-def seo_analyzer(keywords, content):
-    issues = []
+from langchain_core.messages import HumanMessage
+from llm import llm
 
-    if len(content.split()) < 300:
-        issues.append("Content is too short for SEO")
+def seo_reasoner(keywords, content):
+    prompt = f"""
+You are an SEO expert.
 
-    if not keywords:
-        issues.append("No strong keywords detected")
+Analyze the following page data and identify SEO weaknesses.
 
-    return issues
+Keywords (with importance scores):
+{keywords}
+
+Content length: {len(content.split())} words
+
+Return a short list of SEO issues in bullet points.
+Be concise and practical.
+"""
+
+    response = llm.invoke([HumanMessage(content=prompt)])
+    return response.content

@@ -1,24 +1,16 @@
-from scraper import scraper
-from advanced_keyword import advanced_keyword
-from seo_analyzer import seo_analyzer
-from recommendation_agent import recommendation_agent
 
-URL = "https://en.wikipedia.org/wiki/Mukesh_Ambani"
+from agent_graph import build_seo_graph
 
+#URL = "https://en.wikipedia.org/wiki/Mukesh_Ambani"
+URL = "https://quotes.toscrape.com/"
 
-data = scraper(URL)
+app = build_seo_graph()
 
-keywords = advanced_keyword(
-    data["content"],
-    data["headings"]
-)
+final_state = app.invoke({"url": URL})
 
-issues = seo_analyzer(keywords, data["content"])
-recommendations = recommendation_agent(keywords, issues)
+print("\nTOP SEO KEYWORDS:\n")
+for k, score in final_state["keywords"]:
+    print(f"- {k} → score: {score}")
 
-print("\n TOP SEO KEYWORDS:\n")
-for k, score in keywords:
-    print(f"- {k}  → score: {score}")
-
-print("\n SEO ISSUES:\n", issues)
-print("\n SEO RECOMMENDATIONS:\n", recommendations)
+print("\nSEO ISSUES:\n", final_state["issues"])
+print("\nSEO RECOMMENDATIONS:\n", final_state.get("recommendations", "N/A"))
