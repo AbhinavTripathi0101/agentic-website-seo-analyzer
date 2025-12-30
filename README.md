@@ -1,8 +1,7 @@
-# Agentic SEO Analyzer
+# Agentic-inspired SEO Analyzer
 
-An agentic AI–based SEO (Search Engine Optimization) analysis system that inspects webpage content, extracts semantic keyword signals, identifies SEO weaknesses, and suggests targeted improvements to enhance content quality and visibility.
+An agentic-inspired AI–based SEO (Search Engine Optimization) analysis system that inspects webpage content, extracts semantic keyword signals, identifies SEO weaknesses, and suggests targeted improvements to enhance content quality and visibility.
 
----
 
 ## Features
 - Scrapes live webpages using `requests` and `BeautifulSoup`
@@ -50,3 +49,8 @@ pip install -r requirements.txt
 
 ### 3 Run
 python main.py
+
+### Output Image
+![Application Output](https://github.com/user-attachments/assets/3586a2a3-8a58-4395-92be-0df5c7c719a7)
+
+
